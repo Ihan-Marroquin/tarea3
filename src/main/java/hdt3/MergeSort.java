@@ -1,11 +1,13 @@
+// Clase que implementa el algoritmo de ordenamiento Merge Sort
 package hdt3;
 
-// MergeSort.java
 public class MergeSort {
+    // Método para iniciar el proceso de ordenamiento con Merge Sort
     public void sort(int[] arr) {
         mergeSort(arr, 0, arr.length - 1);
     }
 
+    // Método recursivo para dividir y combinar los elementos del arreglo
     private void mergeSort(int[] arr, int left, int right) {
         if (left < right) {
             int mid = (left + right) / 2;
@@ -15,6 +17,7 @@ public class MergeSort {
         }
     }
 
+    // Método para combinar dos subarreglos ordenados en uno solo
     private void merge(int[] arr, int left, int mid, int right) {
         int[] temp = new int[right - left + 1];
         int i = left, j = mid + 1, k = 0;

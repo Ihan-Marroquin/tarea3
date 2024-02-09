@@ -1,9 +1,11 @@
 // QuickSort.java
 public class QuickSort {
+    // Método para iniciar el proceso de ordenamiento con Quick Sort
     public void sort(int[] arr) {
         quickSort(arr, 0, arr.length - 1);
     }
 
+    // Método recursivo para dividir y ordenar los elementos del arreglo
     private void quickSort(int[] arr, int low, int high) {
         if (low < high) {
             int pi = partition(arr, low, high);
@@ -12,6 +14,7 @@ public class QuickSort {
         }
     }
 
+    // Método para dividir el arreglo y colocar el pivote en su posición correcta
     private int partition(int[] arr, int low, int high) {
         int pivot = arr[high];
         int i = low - 1;

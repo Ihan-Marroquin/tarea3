@@ -1,7 +1,8 @@
+// Clase que implementa el algoritmo de ordenamiento Gnome Sort
 package hdt3;
 
-// GnomeSort.java
 public class GnomeSort {
+    // Método para ordenar un arreglo de enteros utilizando Gnome Sort
     public void sort(int[] arr) {
         int index = 0;
         while (index < arr.length) {

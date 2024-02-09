@@ -1,7 +1,8 @@
+// Clase que implementa el algoritmo de ordenamiento Radix Sort
 package hdt3;
 
-// RadixSort.java
 public class RadixSort {
+    // Método para iniciar el proceso de ordenamiento con Radix Sort
     public void sort(int[] arr) {
         int max = getMax(arr);
         for (int exp = 1; max / exp > 0; exp *= 10) {
@@ -9,6 +10,7 @@ public class RadixSort {
         }
     }
 
+    // Método para obtener el valor máximo en el arreglo
     private int getMax(int[] arr) {
         int max = arr[0];
         for (int i = 1; i < arr.length; i++) {
@@ -19,6 +21,7 @@ public class RadixSort {
         return max;
     }
 
+    // Método para ordenar el arreglo utilizando el método de conteo
     private void countSort(int[] arr, int exp) {
         int[] output = new int[arr.length];
         int[] count = new int[10];
@@ -42,4 +45,3 @@ public class RadixSort {
         }
     }
 }
-
